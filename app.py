@@ -25,15 +25,15 @@ PRODUTOS = [
         "descricao": "O charme clássico do estilo americano com um toque de feminilidade rosada."
     },
     {
-        "id": 5, "nome": "Camisola Mibis Floresta", "subcategoria": "Camisola Rosé", "categoria_principal": "Sleepwear", "preco": "44,90", "imagem": "/img/foto5.jpg",
+        "id": 5, "nome": "Camisola Mibis Floresta", "subcategoria": "Camisola Rosé", "categoria_principal": "Sleepwear", "preco": "44,90", "imagem": "/img/foto5.jpeg",
         "descricao": "Simples. Delicada. Completamente sua. A peça que abraça o corpo sem pedir nada."
     },
     {
-        "id": 6, "nome": "Conjunto Élise", "subcategoria": "Short Doll Tule Preto", "categoria_principal": "Lingerie Premium", "preco": "62,90", "imagem": "/img/foto6.jpg",
+        "id": 6, "nome": "Conjunto Élise", "subcategoria": "Short Doll Tule Preto", "categoria_principal": "Lingerie Premium", "preco": "62,90", "imagem": "/img/foto6.jpeg",
         "descricao": "O Conjunto Élise une delicadeza e sensualidade. Tule fluido com silhueta feminina e elegante."
     },
     {
-        "id": 7, "nome": "Conjunto Blanc", "subcategoria": "Short Doll Tule Branco", "categoria_principal": "Lingerie Premium", "preco": "62,90", "imagem": "/img/foto7.jpg",
+        "id": 7, "nome": "Conjunto Blanc", "subcategoria": "Short Doll Tule Branco", "categoria_principal": "Lingerie Premium", "preco": "62,90", "imagem": "/img/foto7.jpeg",
         "descricao": "O branco nunca foi tão sofisticado. Leve, elegante e absolutamente feminina."
     },
     {
@@ -41,7 +41,7 @@ PRODUTOS = [
         "descricao": "O conjunto em renda azul harmonia traz delicadeza e feminilidade numa combinação pensada para encantar."
     },
     {
-        "id": 9, "nome": "Conjunto Serena", "subcategoria": "Poliamida com Renda", "categoria_principal": "Lingerie Premium", "preco": "39,90", "imagem": "/img/foto9.jpg",
+        "id": 9, "nome": "Conjunto Serena", "subcategoria": "Poliamida com Renda", "categoria_principal": "Lingerie Premium", "preco": "39,90", "imagem": "/img/foto9.jpeg",
         "descricao": "O Conjunto Serena une o conforto da poliamida premium com a delicadeza da renda num equilíbrio perfeito."
     },
     {
