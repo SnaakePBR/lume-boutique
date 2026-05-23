@@ -33,7 +33,7 @@ PRODUTOS = [
         "descricao": "O Conjunto Élise une delicadeza e sensualidade. Tule fluido com silhueta feminina e elegante."
     },
     {
-        "id": 7, "nome": "Conjunto Blanc", "subcategoria": "Short Doll Tule Branco", "categoria_principal": "Lingerie Premium", "preco": "62,90", "imagem": "/img/foto7.jpg",
+        "id": 7, "nome": "Conjunto Blanc", "subcategoria": "Short Doll Tule Branco", "categoria_principal": "Lingerie Premium", "preco": "62,90", "imagem": "/img/foto7.jpeg",
         "descricao": "O branco nunca foi tão sofisticado. Leve, elegante e absolutamente feminina."
     },
     {
@@ -52,7 +52,7 @@ PRODUTOS = [
 ]
 
 # ==========================================
-# HTML + CSS + JS (CARRINHO E EXPANSÃO)
+# HTML + CSS + JS 
 # ==========================================
 
 HTML = """
@@ -81,7 +81,7 @@ HTML = """
         body { font-family:'Montserrat', sans-serif; background:var(--fundo); color:var(--texto); overflow-x:hidden; }
         html { scroll-behavior:smooth; }
 
-        /* HERO & NAVBAR (mantido exatamente igual) */
+        /* HERO & NAVBAR */
         .hero { height: 100vh; background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=1600&q=80'); background-size: cover; background-position: center; display: flex; justify-content: center; align-items: center; text-align: center; color: var(--branco); }
         .hero-content { animation: fadeUp 1.2s ease; }
         .hero h1 { font-family: 'Bodoni Moda', serif; font-size: 6rem; letter-spacing: 8px; margin-bottom: 20px; font-weight: 400; }
@@ -123,33 +123,35 @@ HTML = """
         .title { text-align: center; margin-bottom: 60px; }
         .title h2 { font-family: 'Bodoni Moda', serif; font-size: 3rem; margin-bottom: 15px; font-weight: 400; }
         .title p { color: #555; font-weight: 300; }
-        .categoria-titulo { font-family: 'Bodoni Moda', serif; font-size: 2.5rem; margin-top: 50px; margin-bottom: 30px; border-bottom: 1px solid var(--apoio); padding-bottom: 10px; color: var(--texto); text-align: left; font-weight: 400;}
+        .categoria-titulo { font-family: 'Bodoni Moda', serif; font-size: 2.2rem; margin-top: 50px; margin-bottom: 30px; border-bottom: 1px solid var(--apoio); padding-bottom: 10px; color: var(--texto); text-align: left; font-weight: 400;}
 
-        /* GRID E EXPANSÃO (A Mágica acontece aqui) */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; margin-bottom: 20px; }
-        
-        /* Classe que esconde os produtos a partir do 4º */
+        /* ================= O QUE FOI AJUSTADO: GRID & CARD ================= */
+        /* Reduzi o minmax para os cartões ficarem mais estreitos */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; margin-bottom: 20px; }
         .grid.colapsado .card:nth-child(n+4) { display: none; }
         
-        /* Botão Ver Mais */
         .ver-mais-container { text-align: center; margin-bottom: 70px; }
         .btn-ver-mais { background: transparent; border: none; color: var(--texto); font-family: 'Montserrat', sans-serif; text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; cursor: pointer; transition: 0.3s; padding: 10px; font-weight: 500;}
         .btn-ver-mais:hover { color: var(--detalhes); }
         .btn-ver-mais i { margin-left: 8px; transition: transform 0.4s ease; }
-        /* Quando a grid estiver expandida, a seta vira pra cima */
         .btn-ver-mais.aberto i { transform: rotate(180deg); }
 
-        /* CARD */
         .card { background: var(--branco); border: 1px solid var(--apoio); overflow: hidden; transition: 0.4s; display: flex; flex-direction: column; animation: fadeIn 0.5s ease; }
         .card:hover { transform: translateY(-5px); border-color: var(--detalhes); }
-        .card img { width: 100%; height: 460px; object-fit: cover; transition: 0.5s; }
+        
+        /* Reduzi a altura da imagem de 460px para 350px */
+        .card img { width: 100%; height: 350px; object-fit: cover; transition: 0.5s; }
         .card:hover img { transform: scale(1.03); }
-        .card-content { padding: 30px; display: flex; flex-direction: column; flex-grow: 1; }
-        .subcategoria { color: var(--detalhes); text-transform: uppercase; font-size: 0.75rem; letter-spacing: 2px; font-weight: 600; }
-        .card h3 { font-family: 'Bodoni Moda', serif; font-size: 2rem; margin: 15px 0; font-weight: 400; }
-        .desc { color: #555; line-height: 1.8; margin-bottom: 25px; font-size: 0.9rem; font-weight: 300; }
-        .price { font-size: 1.5rem; font-weight: 500; margin-bottom: 25px; font-family: 'Bodoni Moda', serif;}
-        .btn { width: 100%; border: 1px solid var(--texto); background: transparent; color: var(--texto); padding: 16px; cursor: pointer; transition: 0.3s; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; margin-top: auto;}
+        
+        /* Reduzi o padding interno do cartão e o tamanho das fontes */
+        .card-content { padding: 22px; display: flex; flex-direction: column; flex-grow: 1; }
+        .subcategoria { color: var(--detalhes); text-transform: uppercase; font-size: 0.7rem; letter-spacing: 2px; font-weight: 600; }
+        .card h3 { font-family: 'Bodoni Moda', serif; font-size: 1.5rem; margin: 12px 0; font-weight: 400; }
+        .desc { color: #555; line-height: 1.6; margin-bottom: 20px; font-size: 0.85rem; font-weight: 300; }
+        .price { font-size: 1.3rem; font-weight: 500; margin-bottom: 20px; font-family: 'Bodoni Moda', serif;}
+        
+        /* Botão mais fino */
+        .btn { width: 100%; border: 1px solid var(--texto); background: transparent; color: var(--texto); padding: 12px; cursor: pointer; transition: 0.3s; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; margin-top: auto;}
         .btn:hover { background: var(--texto); color: var(--branco); }
 
         /* SOBRE & FOOTER */
@@ -169,7 +171,7 @@ HTML = """
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
         @media(max-width:900px){ .hero h1 { font-size: 4rem; } .about { grid-template-columns: 1fr; } .nav-center a { display: none; } }
-        @media(max-width:600px){ .hero h1 { font-size: 3rem; letter-spacing: 4px; } .title h2 { font-size: 2.2rem; } .categoria-titulo { font-size: 2rem; } .cart-drawer { width: 100%; right: -100%; } }
+        @media(max-width:600px){ .hero h1 { font-size: 3rem; letter-spacing: 4px; } .title h2 { font-size: 2.2rem; } .categoria-titulo { font-size: 1.8rem; } .cart-drawer { width: 100%; right: -100%; } }
     </style>
 </head>
 
@@ -286,31 +288,20 @@ HTML = """
     <script>
         const TELEFONE = "351931142887";
 
-        // ==========================================
-        // FUNÇÃO: VER MAIS / VER MENOS
-        // ==========================================
         function toggleCategoria(gridId, btnElement) {
             const grid = document.getElementById(gridId);
-            
             if (grid.classList.contains('colapsado')) {
-                // Expandir
                 grid.classList.remove('colapsado');
                 btnElement.classList.add('aberto');
                 btnElement.innerHTML = 'Ver menos <i class="fa-solid fa-chevron-up"></i>';
             } else {
-                // Colapsar
                 grid.classList.add('colapsado');
                 btnElement.classList.remove('aberto');
                 btnElement.innerHTML = 'Ver coleção completa <i class="fa-solid fa-chevron-down"></i>';
-                
-                // Rolar a tela suavemente de volta para o topo da categoria para o cliente não se perder
                 grid.previousElementSibling.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
         }
 
-        // ==========================================
-        // FUNÇÕES DO CARRINHO
-        // ==========================================
         let carrinho = JSON.parse(localStorage.getItem('lume_carrinho')) || [];
 
         function salvarCarrinho() {
