@@ -33,7 +33,7 @@ PRODUTOS = [
         "descricao": "O Conjunto Élise une delicadeza e sensualidade. Tule fluido com silhueta feminina e elegante.", "stock_baixo": True
     },
     {
-        "id": 7, "nome": "Conjunto Blanc", "subcategoria": "Short Doll Tule Branco", "categoria_principal": "Lingerie Premium", "preco": "62,90", "imagem": "/img/foto7.jpg",
+        "id": 7, "nome": "Conjunto Blanc", "subcategoria": "Short Doll Tule Branco", "categoria_principal": "Lingerie Premium", "preco": "62,90", "imagem": "/img/foto7.jpeg",
         "descricao": "O branco nunca foi tão sofisticado. Leve, elegante e absolutamente feminina.", "stock_baixo": False
     },
     {
